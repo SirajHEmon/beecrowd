@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+    int n;
+    int c = 1;
+    while(scanf("%d",&n)!=EOF){
+
+        if(n==0){
+            printf("caso %d: 1 numero\n",c);
+            printf("0\n\n");
+            c++;
+            continue;
+        }
+
+        int count = 1,i;
+        for(i=1; i<=n; i++){
+            count+=i;
+        }
+        printf("Caso %d: %d numeros\n", c, count);
+        printf("0");
+        for(int k=1; k<=n; k++){
+            for(int l = 0; l<k; l++){
+                printf(" %d",k);
+            }
+        }
+        printf("\n\n");
+        c++;
+
+    }
+
+}
